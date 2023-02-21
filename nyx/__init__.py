@@ -650,6 +650,7 @@ class Interface(object):
 
     return self._page
 
+  @profile
   def set_page(self, page_number):
     """
     Sets the selected page.
