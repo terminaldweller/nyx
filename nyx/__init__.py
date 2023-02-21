@@ -207,6 +207,8 @@ def main():
 
 @profile
 def draw_loop():
+  with open("/home/ubuntu/.nyxlog", "w") as nyxlog:
+    nyxlog.write("XXX")
   interface = nyx_interface()
   next_key = None  # use this as the next user input
 
