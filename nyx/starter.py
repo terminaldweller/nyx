@@ -24,6 +24,7 @@ import stem.connection
 import stem.util.log
 import stem.util.system
 
+from memory_profiler import profile
 from nyx import init_controller, uses_settings, nyx_interface
 
 DEBUG_HEADER = """
@@ -45,6 +46,7 @@ Torrc ({torrc_path}):
 """.rstrip()
 
 
+@profile
 @uses_settings
 def main(config):
   config.set('start_time', str(int(time.time())))
@@ -239,7 +241,7 @@ def _set_process_name():
   except IOError as exc:
     stem.util.log.info("Unable to rename our process from '%s' to '%s' (%s)." % (stem.util.system.get_process_name(), process_name.replace('\0', ' '), exc))
 
-
+@profile
 def _shutdown_daemons(controller):
   """
   Stops and joins on worker threads.

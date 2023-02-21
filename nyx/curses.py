@@ -83,6 +83,7 @@ if we want Windows support in the future too.
 """
 
 from __future__ import absolute_import
+from  memory_profiler import profile
 
 import collections
 import curses
@@ -186,6 +187,7 @@ CONFIG = stem.util.conf.config_dict('nyx', {
 }, conf_handler)
 
 
+@profile
 def start(function, acs_support = True, transparent_background = False, cursor = True):
   """
   Starts a curses interface, delegating to the given function.

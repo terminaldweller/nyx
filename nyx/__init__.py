@@ -52,6 +52,8 @@ import sys
 import threading
 import time
 
+from memory_profiler import profile
+
 # mapping of package managers to their stem installation command
 
 PACKAGE_MANAGERS = collections.OrderedDict((
@@ -326,6 +328,7 @@ def input_prompt(msg, initial_value = ''):
   return user_input
 
 
+@profile
 def init_controller(*args, **kwargs):
   """
   Sets the Controller used by nyx. This is a passthrough for Stem's
