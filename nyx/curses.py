@@ -537,6 +537,7 @@ def demo_glyphs():
     http://www.mkssoftware.com/docs/man5/terminfo.5.asp
   """
 
+  @profile
   def _render():
     height, width = CURSES_SCREEN.getmaxyx()
     columns = width / 30
