@@ -261,6 +261,7 @@ def draw_loop():
     interface.redraw(force = not key.is_null())
 
 
+@profile
 def nyx_interface():
   """
   Singleton controller for our interface.
@@ -274,6 +275,7 @@ def nyx_interface():
   return NYX_INTERFACE
 
 
+@profile
 def tor_controller():
   """
   Singleton for getting our tor controller connection.
