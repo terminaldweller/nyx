@@ -198,6 +198,7 @@ def start(function, acs_support = True, transparent_background = False, cursor =
   :param bool cursor: makes cursor visible
   """
 
+  @profile
   def _wrapper(stdscr):
     global CURSES_SCREEN
 

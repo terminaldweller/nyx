@@ -729,6 +729,7 @@ class Interface(object):
       for panel in self.page_panels():
         panel.redraw()
 
+  @profile
   def redraw(self, force = False):
     """
     Renders our displayed content.

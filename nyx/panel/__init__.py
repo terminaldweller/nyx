@@ -34,6 +34,8 @@ import time
 import nyx
 import nyx.curses
 
+from memory_profiler import profile
+
 __all__ = [
   'config',
   'connection',
@@ -151,6 +153,7 @@ class Panel(object):
 
     return None
 
+  @profile
   def redraw(self, force = True, top = None):
     """
     Renders our panel's content to the screen.
