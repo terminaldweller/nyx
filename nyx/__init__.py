@@ -690,6 +690,7 @@ class Interface(object):
 
     return self._header_panel
 
+  @profile
   def page_panels(self, page_number = None):
     """
     Provides panels belonging to a page, ordered top to bottom.
