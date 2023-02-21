@@ -205,7 +205,7 @@ def main():
     sys.exit(1)
 
 
-@define
+@profile
 def draw_loop():
   interface = nyx_interface()
   next_key = None  # use this as the next user input
